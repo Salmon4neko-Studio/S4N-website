@@ -102,6 +102,8 @@
         if (el) { navLinks[id] = el; hasLinks = true; }
     });
     if (!hasLinks) return;
+    // Inner pages mark the current item in HTML. The scroll spy only applies on the home page.
+    if (!document.getElementById('hero') || !document.getElementById('about')) return;
 
     const onScroll = () => {
         const scrollY = window.scrollY + 100;
@@ -123,23 +125,4 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-})();
-
-// ---- 服務卡片：滑鼠光暈（亮色系版本）----
-(function () {
-    const cards = document.querySelectorAll('.s4n-service-card, .s4n-partner-card');
-
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1);
-            const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1);
-            card.style.background =
-                `radial-gradient(circle at ${x}% ${y}%, rgba(255,99,16,0.05), transparent 55%), #ffffff`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.background = '';
-        });
-    });
 })();

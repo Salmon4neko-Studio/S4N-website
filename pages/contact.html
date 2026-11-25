@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="is-light">
 
 <head>
     <meta charset="UTF-8" />
@@ -20,10 +20,10 @@
     <!-- 字體：Noto Sans TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="../style.css?v=20260722a" />
+    <link rel="stylesheet" href="../style.css?v=20261125a" />
 
 
     <style>
@@ -35,8 +35,8 @@
         .s4n-contact-page-hero {
             position: relative;
             padding: 7rem 0 5rem;
-            margin-top: 64px;
-            background: linear-gradient(135deg, var(--s4n-salmon) 0%, var(--s4n-salmon-lt) 60%, #ff9f6b 100%);
+            margin-top: var(--s4n-header-h);
+            background: linear-gradient(135deg, var(--s4n-primary) 0%, var(--s4n-link-hover) 60%, #ffc56a 100%);
             overflow: hidden;
         }
 
@@ -67,7 +67,7 @@
 
         .s4n-contact-page-hero-title {
             font-size: clamp(2.25rem, 5vw, 3.5rem);
-            font-weight: 900;
+            font-weight: 700;
             letter-spacing: -0.03em;
             color: #fff;
             margin-bottom: 1rem;
@@ -106,15 +106,15 @@
             border: 1px solid var(--s4n-border);
             border-radius: var(--s4n-radius-lg);
             box-shadow: var(--s4n-shadow-sm);
-            transition: border-color var(--s4n-transition), transform var(--s4n-transition), box-shadow var(--s4n-transition);
+            transition: border-color var(--s4n-duration) var(--s4n-ease),
+                transform var(--s4n-duration) var(--s4n-ease),
+                box-shadow var(--s4n-duration) var(--s4n-ease);
             text-decoration: none;
             color: inherit;
         }
 
         .s4n-contact-channel-card:hover {
-            border-color: rgba(255,99,16,0.3);
-            transform: translateY(-5px);
-            box-shadow: var(--s4n-shadow-lg);
+            border-color: rgba(242, 133, 0, 0.3);
         }
 
         .s4n-contact-channel-icon-wrap {
@@ -134,8 +134,8 @@
         }
 
         .s4n-channel-email .s4n-contact-channel-icon-wrap {
-            background: var(--s4n-salmon-pale);
-            box-shadow: 0 4px 16px rgba(255,99,16,0.2);
+            background: var(--s4n-primary-pale);
+            box-shadow: 0 4px 16px rgba(242, 133, 0,0.2);
         }
 
         .s4n-contact-channel-label {
@@ -149,7 +149,7 @@
 
         .s4n-contact-channel-name {
             font-size: 1.25rem;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--s4n-text);
             line-height: 1.2;
             margin-bottom: 0.25rem;
@@ -167,7 +167,7 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-top: auto;
             padding-top: 0.5rem;
         }
@@ -177,7 +177,7 @@
         }
 
         .s4n-channel-email .s4n-contact-channel-cta {
-            color: var(--s4n-salmon);
+            color: var(--s4n-primary);
         }
 
         .s4n-contact-channel-card:hover .s4n-contact-channel-cta {
@@ -204,7 +204,7 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.8125rem;
-            font-weight: 600;
+            font-weight: 500;
             padding: 0.45rem 1rem;
             border-radius: var(--s4n-radius-sm);
             border: 1.5px solid var(--s4n-border-md);
@@ -215,9 +215,9 @@
             margin-top: 0.25rem;
         }
         .s4n-copy-btn:hover {
-            background: var(--s4n-salmon-pale);
-            color: var(--s4n-salmon);
-            border-color: rgba(255,99,16,0.3);
+            background: var(--s4n-primary-pale);
+            color: var(--s4n-primary);
+            border-color: rgba(242, 133, 0,0.3);
         }
         .s4n-copy-btn.is-copied {
             background: #e8f9ef;
@@ -253,7 +253,7 @@
                 <a href="news.html" class="s4n-nav-link" id="nav-news">最新消息</a>
                 <a href="contact.html" class="s4n-nav-link is-active" id="nav-contact">聯絡我們</a>
             </nav>
-            <a href="services.html" class="s4n-cta-btn" id="cta-button">了解服務</a>
+            <a href="services.html" class="ts-button s4n-cta-btn" id="cta-button">了解服務</a>
             <button class="s4n-menu-toggle" id="menu-toggle" aria-label="開啟選單" aria-expanded="false"
                 aria-controls="mobile-menu">
                 <span></span><span></span><span></span>
@@ -266,7 +266,7 @@
             <a href="../index.html#partners" class="s4n-mobile-link" id="mobile-nav-partners">夥伴組織</a>
             <a href="news.html" class="s4n-mobile-link" id="mobile-nav-news">最新消息</a>
             <a href="contact.html" class="s4n-mobile-link" id="mobile-nav-contact">聯絡我們</a>
-            <a href="services.html" class="s4n-mobile-cta" id="mobile-cta">了解服務</a>
+            <a href="services.html" class="ts-button s4n-mobile-cta" id="mobile-cta">了解服務</a>
         </div>
     </header>
 
@@ -327,7 +327,7 @@
                     </div>
                     <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:auto; padding-top:0.5rem;">
                         <a href="mailto:business@salmon4neko.com"
-                            class="s4n-btn s4n-btn-primary"
+                            class="ts-button s4n-btn s4n-btn-primary"
                             style="padding:0.45rem 1rem; font-size:0.8125rem;"
                             id="contact-email-mailto">寄送郵件</a>
                         <button class="s4n-copy-btn" id="copy-email-btn" aria-label="複製信箱">
@@ -349,8 +349,8 @@
                     瀏覽我們的完整服務項目，找到最適合您的合作方案。
                 </p>
                 <div class="s4n-cta-actions">
-                    <a href="services.html" class="s4n-btn s4n-btn-white" id="contact-to-services-btn">查看服務項目</a>
-                    <a href="../index.html" class="s4n-btn s4n-btn-outline-white" id="contact-to-home-btn">回到首頁</a>
+                    <a href="services.html" class="ts-button s4n-btn s4n-btn-white" id="contact-to-services-btn">查看服務項目</a>
+                    <a href="../index.html" class="ts-button s4n-btn s4n-btn-outline-white" id="contact-to-home-btn">回到首頁</a>
                 </div>
             </div>
         </div>
@@ -392,8 +392,7 @@
                 </div>
                 <div class="s4n-footer-copy" id="footer-copy">
                     © 2026 Salmon4neko Studio 鮭貓工作室 · <a href="https://sake-corp.com/" target="_blank" rel="noopener"
-                        style="color:inherit; text-decoration:underline; text-underline-offset:3px; opacity:0.75; transition:opacity 0.2s;"
-                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.75'">石桂商社</a>旗下組織
+                        >石桂商社</a>旗下組織
                 </div>
             </div>
         </div>
